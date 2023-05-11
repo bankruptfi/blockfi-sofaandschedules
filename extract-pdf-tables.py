@@ -76,6 +76,17 @@
 #           AMENDED SCHEDULE OF ASSETS AND LIABILITIES FOR BLOCKFI INTERNATIONAL LTD. (CASE NO. 22-19368)
 # 4-35      Amended Schedule E/F: Part 2 ‐ Creditors With Nonpriority Unsecured Claims
 #
+# Doc 856   3fb0d0bd-a91e-49cd-9ccd-fe5ff6c4f46d.pdf
+#           SECOND AMENDED2 SCHEDULE OF ASSETS AND LIABILITIES FOR BLOCKFI INC. (CASE NO. 22-19361)
+# 4-245     Amended Schedule E/F:  Part 2 ‐ Creditors With Nonpriority Unsecured Claims
+#
+# Doc 857   86576569-5ef3-40aa-a7fa-61043db5ebc7
+#           SECOND AMENDED2 SCHEDULE OF ASSETS AND LIABILITIES FOR BLOCKFI LENDING LLC (CASE NO. 22-19365)
+# 4-6       Amended Schedule E/F: Part 2 ‐ Creditors With Nonpriority Unsecured Claims
+#
+# Doc 858   bf59d8dc-cc58-4764-b52e-63697bf767e1
+#           SECOND AMENDED2 SCHEDULE OF ASSETS AND LIABILITIES FOR BLOCKFI INTERNATIONAL LTD. (CASE NO. 22-19368)
+# 4-101     Amended Schedule E/F: Part 2 ‐ Creditors With Nonpriority Unsecured Claims
 # #
 
 import camelot
@@ -116,6 +127,12 @@ dcoins = {"inputfile": "pdf/b49c389d-5061-4990-b533-435db20a6cb1.pdf",
           "outputfile": "output-stage1/dcoins", "startpage": 14, "endpage": 16}
 d242tf = {"inputfile": "pdf/f73381b3-95a8-4c48-a227-60191de51a7b.pdf",
         "outputfile": "output-stage1/242-blockfiinc-unsecuredclaims", "startpage": 9983, "endpage": 9983}
+d856 = {"inputfile": "pdf/3fb0d0bd-a91e-49cd-9ccd-fe5ff6c4f46d.pdf",
+        "outputfile": "output-stage1/856-blockfiinc-unsecuredclaims", "startpage": 4, "endpage": 245}
+d857 = {"inputfile": "pdf/86576569-5ef3-40aa-a7fa-61043db5ebc7.pdf",
+        "outputfile": "output-stage1/857-lendingllc-unsecuredclaims", "startpage": 4, "endpage": 6}
+d858 = {"inputfile": "pdf/bf59d8dc-cc58-4764-b52e-63697bf767e1.pdf",
+        "outputfile": "output-stage1/858-blockfiintl-unsecuredclaims", "startpage": 4, "endpage": 101}
 
 
 def tstart():
@@ -198,5 +215,8 @@ if __name__ == "__main__":
     getgeneric(d262b) #propertyheld
     getgeneric(d461)  #unsecuredclaims
     getgeneric(d462, split_text=False)  #unsecuredclaims
+    getgeneric(d856, split_text=False)  #unsecuredclaims
+    getgeneric(d857, split_text=False)  #unsecuredclaims
+    getgeneric(d858, split_text=False)  #unsecuredclaims
     getgeneric(dcoins)
     #getgeneric(d242tf)

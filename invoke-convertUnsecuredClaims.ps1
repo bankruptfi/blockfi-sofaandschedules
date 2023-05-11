@@ -1,7 +1,16 @@
 # Read all of the unsecuredclaims csv files generated from camelot and combine 
 # them into one file for each docket
 
-$filelist = "242-blockfiinc-unsecuredclaims", "247-blockfiintl-unsecuredclaims", "251-lendingllc-unsecuredclaims", "461-lendingllc-unsecuredclaims", "462-blockfiintl-unsecuredclaims"
+$filelist = @(
+    "242-blockfiinc-unsecuredclaims"
+    "247-blockfiintl-unsecuredclaims"
+    "251-lendingllc-unsecuredclaims"
+    "461-lendingllc-unsecuredclaims"
+    "462-blockfiintl-unsecuredclaims"
+    "856-blockfiinc-unsecuredclaims"
+    "857-lendingllc-unsecuredclaims"
+    "858-blockfiintl-unsecuredclaims"
+)
 
 foreach ($f in $filelist) {
     $inputfiles = Get-ChildItem -Path ./output-stage1/$($f)*
